@@ -1,0 +1,31 @@
+{
+  "name": "blood-bank-mern",
+  "version": "2.0.0",
+  "description": "Banque de sang MERN : organisations, donneurs, hôpitaux, administrateur",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently -n API,WEB -c red,cyan \"npm run server\" \"npm run client\"",
+    "client-install": "npm install --prefix client",
+    "setup": "npm install && npm install --prefix client",
+    "build": "npm run build --prefix client",
+    "seed": "node scripts/seed.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  }
+}
